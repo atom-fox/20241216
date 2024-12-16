@@ -1,0 +1,142 @@
+.viewer-container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.zoom-controls {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: flex;
+  gap: 0.5rem;
+  z-index: 20;
+}
+
+.zoom-button {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: white;
+  border: 1px solid #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 6px;
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  transition: all 0.2s;
+}
+
+.zoom-button:hover:not(:disabled) {
+  background-color: #f3f4f6;
+  transform: scale(1.1);
+}
+
+.zoom-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.zoom-button svg {
+  width: 20px;
+  height: 20px;
+  stroke: #4b5563;
+}
+
+.pages-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  width: 100%;
+  padding: 1rem;
+  justify-content: center;
+}
+
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  background: white;
+  padding: 0.5rem;
+  border-radius: 0.375rem;
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1);
+  transition: all 0.3s ease;
+}
+
+.page-container {
+  position: relative;
+  transform-origin: center;
+  transition: all 0.3s ease;
+}
+
+.page-frame {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #f3f4f5;
+  border-radius: 0.25rem;
+}
+
+.page-rotator {
+  transition: all 0.3s ease;
+  transform-origin: center center;
+  width: fit-content;
+  height: fit-content;
+}
+
+.rotate-button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 4px;
+  z-index: 10;
+  transition: all 0.2s;
+  background-color: #ff612f;
+  border: none;
+}
+
+.rotate-button:hover {
+  transform: scale(1.1);
+}
+
+.rotate-button svg {
+  width: 12px;
+  height: 12px;
+  fill: #ffffff;
+}
+
+.page-number {
+  font-size: 0.75rem;
+  color: #4b5563;
+  line-height: 1;
+}
+
+.document {
+  width: 100%;
+}
+
+.page {
+  max-width: none;
+  max-height: none;
+  width: 100% !important;
+  height: 100% !important;
+}
+
