@@ -24,7 +24,6 @@ body {
 /* 其他全局样式 */
 
 .container {
-  min-height: 100vh;
   padding: 0 0.5rem;
 }
 
